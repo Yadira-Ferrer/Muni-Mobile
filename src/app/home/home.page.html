@@ -1,0 +1,64 @@
+<ion-header [translucent]="true">
+  
+</ion-header>
+
+<ion-content [fullscreen]="true" class="ion-padding">
+
+  <ion-grid fixed>
+    <ion-row>
+      <ion-col class="ion-padding-vertical" >
+        <img src="../../assets/img/muni-logo-e.svg" class="img-center" alt="">
+      </ion-col>
+    </ion-row>
+    <ion-row justify-content-center>
+      <ion-col class="ion-padding-top">
+        <ion-item >
+          <ion-label>
+            <h1 class="center">¡BIENVENIDO!</h1>
+          </ion-label>
+        </ion-item>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+
+  <ion-grid class="grid-btn">
+    <ion-row>
+      <ion-col>
+        <ion-button class="btn-login"
+                    expand="block"
+                    routerLink="/login">Iniciar Sesión</ion-button>
+      </ion-col>
+    </ion-row>
+
+    <ion-row>
+      <ion-col>
+        <ion-button class="btn-signup"
+                    expand="block"
+                    routerLink="/signup">Registrarme</ion-button>
+      </ion-col>
+    </ion-row>
+
+    <ion-row>
+      <ion-col>
+        <hr />
+      </ion-col>
+    </ion-row>
+
+    <ion-row>
+      <ion-col>
+        <ion-button color="medium"
+                    expand="block"
+                    fill="outline"
+                    routerLink="/anonymus-page" >Ingreso Ánonimo</ion-button>
+      </ion-col>
+    </ion-row>
+
+  </ion-grid>
+
+</ion-content>
+
+<ion-footer>
+  <ion-toolbar>
+    <p>All Rights Reserved - 2021</p>
+  </ion-toolbar>
+</ion-footer>

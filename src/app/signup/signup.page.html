@@ -1,0 +1,102 @@
+<ion-header class="ion-no-border" translucent>
+  <ion-toolbar>
+    <ion-buttons 
+      slot="start">
+      <ion-back-button
+        defaultHref="/"
+        color="dark"
+        mode="md"></ion-back-button>
+    </ion-buttons>
+
+    <ion-title class="ion-text-capitalize">
+      Registro de usuario
+    </ion-title>
+
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-padding">
+
+  <div class="title">
+    <h1> REGISTRARME EN LA APP </h1>
+    <p>Ingresa los datos que se te solicitan para crear una cuenta en la aplicación.</p>
+  </div>
+
+  <ion-list>
+    <ion-item>
+      <ion-input autocorrect="on"
+                 clearInput="true"
+                 inputmode="text"
+                 placeholder="Nombres"
+                 class="ion-padding"
+                 [(ngModel)]="user.nombre"></ion-input>
+      <ion-icon slot="start" name="person-circle-outline"></ion-icon>
+    </ion-item>
+
+    <ion-item>
+      <ion-input autocorrect="on"
+                 clearInput="true"
+                 inputmode="text"
+                 placeholder="Apellidos"
+                 class="ion-padding"
+                 [(ngModel)]="user.apellido"></ion-input>
+      <ion-icon slot="start" name="person-circle-outline"></ion-icon>
+    </ion-item>
+    
+    <ion-item>
+      <ion-input autocorrect="on"
+                 clearInput="true"
+                 inputmode="tel"
+                 type="tel"
+                 placeholder="Número de teléfono"
+                 class="ion-padding"
+                 [(ngModel)]="telstr"></ion-input>
+      <ion-icon slot="start" name="call-outline"></ion-icon>
+    </ion-item>
+
+    <ion-item>
+      <ion-input autocorrect="on"
+                 clearInput="true"
+                 inputmode="text"
+                 placeholder="Domicilio"
+                 class="ion-padding"
+                 [(ngModel)]="user.domicilio"></ion-input>
+      <ion-icon slot="start" name="home-outline"></ion-icon>
+    </ion-item>
+
+    <ion-item>
+      <ion-input autocorrect="on"
+                 clearInput="true"
+                 inputmode="text"
+                 type="nickname"
+                 placeholder="Nombre de usuario"
+                 required="true"
+                 class="ion-padding"
+                 [(ngModel)]="user.username"></ion-input>
+      <ion-icon slot="start" name="person-outline"></ion-icon>
+    </ion-item>
+
+    <ion-item>
+      <ion-input autocorrect="on"
+                 clearInput="true"
+                 inputmode="new-password"
+                 [type]="showPassword ? 'text' : 'password'"
+                 placeholder="Contraseña"
+                 required="true"
+                 [(ngModel)]="user.password"></ion-input>
+      <ion-icon slot="start" name="key-outline"></ion-icon>
+      <ion-icon slot="end" color="medium" [name]="passwordToggleIcon" (click)="togglePassword()"></ion-icon>
+    </ion-item>
+
+  </ion-list>
+
+  <ion-button class="btn-signup" expand="block" (click)="getUserInfo()">Registrarme</ion-button>
+
+</ion-content>
+
+<ion-footer>
+  <ion-toolbar class="ion-toolbar-footer">
+    <p>All Rights Reserved - 2021</p>
+  </ion-toolbar>
+</ion-footer>
+

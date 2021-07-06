@@ -1,0 +1,44 @@
+<ion-header class="ion-no-border" translucent>
+  <ion-toolbar>
+
+    <ion-title class="ion-text-capitalize">
+      <img src="../../assets/img/muni-mixco-e.png" alt="">
+    </ion-title>
+
+    <ion-buttons slot="end">
+      <ion-tab-button routerLink="/home">
+        <ion-icon name="log-out-outline" class="icon-color"></ion-icon>
+        <!-- <ion-label>Salir</ion-label> -->
+      </ion-tab-button>
+    </ion-buttons>
+
+  </ion-toolbar>
+
+  <ion-segment [(ngModel)]="segmentModel">
+    <ion-segment-button value="mis-denuncias">
+      <ion-icon name="list"></ion-icon>
+      <ion-label><small>Denuncias</small></ion-label>
+    </ion-segment-button>
+    <ion-segment-button value="nueva">
+      <ion-icon name="add-circle-outline"></ion-icon>
+      <ion-label><small>Añadir</small></ion-label>
+    </ion-segment-button>
+    <ion-segment-button value="mensajes">
+      <ion-icon name="mail-outline"></ion-icon>
+      <ion-label><small>Mensajes</small></ion-label>
+    </ion-segment-button>
+  </ion-segment>
+</ion-header>
+
+<ion-content class="ion-padding">
+
+  <app-lista-denuncias *ngIf="segmentModel === 'mis-denuncias'"
+                       [in_iduser]="iduser"></app-lista-denuncias>
+
+  <app-nueva-denuncia *ngIf="segmentModel === 'nueva'"
+                      [in_iduser]="iduser"></app-nueva-denuncia>
+
+  <app-notificacion *ngIf="segmentModel === 'mensajes'"
+                    [in_iduser]="iduser"></app-notificacion>
+
+</ion-content>

@@ -1,0 +1,72 @@
+h3 {
+    text-align: center;
+    color: #92D300;
+}
+
+.divider-3 {
+    border-bottom: 1px solid #FFF;
+    background-color: #DADADA;
+    height: 2px;
+    margin: 0.5em 0px 1.5em;
+}
+
+.divider-3 span {
+    display: block;
+    width: 50px;
+    height: 2px;
+    background-color: #92D300;
+}
+
+ion-item {
+    --border-radius: 15px;
+    --border-width: 2px;
+    --border-color: #4e5f5ea2;
+    --highlight-height: 0;
+    /* --highlight-color-focused: #168f898f; */
+    --background: transparent;
+    --ion-color-base: transparent !important;
+    margin-bottom: 5px;
+}
+
+ion-list {
+    background-color: rgba(0, 0, 0, 0);
+}
+
+ion-button {
+    --background: #1CB0A8;
+}
+
+img {
+    border-radius: 5%;
+}
+
+.btn-finalizar {
+    --background: #0079D2;
+    margin-left: 12px;
+    margin-right: 12px;
+}
+
+ion-select::part(text) {
+    color: #1CB0A8;
+}
+
+ion-datetime::part(text) {
+    color: #1CB0A8;
+}
+
+.myCustomSelect{
+    max-width: 100% !important;
+}
+
+ion-item.item-has-focus > ion-label{
+    color:  #ffffff  !important;
+}
+
+ion-textarea {
+    color: #1CB0A8;
+}
+
+ion-segment-button {
+    height: 20px;
+    min-height: 20px;
+}

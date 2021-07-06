@@ -1,0 +1,22 @@
+<ion-header class="ion-no-border" translucent>
+  <ion-toolbar>
+
+    <ion-title class="ion-text-capitalize">
+      <img src="../../assets/img/muni-mixco-e.png" alt="">
+    </ion-title>
+
+    <ion-buttons slot="end">
+      <ion-tab-button routerLink="/home">
+        <ion-icon name="chevron-forward-outline" class="icon-color"></ion-icon>
+      </ion-tab-button>
+    </ion-buttons>
+
+  </ion-toolbar>
+
+</ion-header>
+
+<ion-content class="ion-padding">
+
+  <app-nueva-denuncia [in_iduser]="iduser"></app-nueva-denuncia>
+
+</ion-content>

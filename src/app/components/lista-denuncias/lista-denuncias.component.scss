@@ -1,0 +1,23 @@
+ion-list {
+    background-color: rgba(0, 0, 0, 0);
+}
+
+ion-badge {
+    --color: white;
+}
+
+.badge-red {
+    --background: #EF4056;
+}
+
+.badge-yellow {
+    --background: #FCB643;
+}
+
+.badge-green {
+    --background: #1CB0A8;
+}
+
+ion-label {
+    font-weight: bold;
+}

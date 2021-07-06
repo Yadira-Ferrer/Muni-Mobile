@@ -1,0 +1,83 @@
+<div>
+
+  <ion-grid fixed>
+    <ion-row>
+      <ion-col>
+        <h3>NUEVA DENUNCIA</h3>
+        <div class="divider-3"> <span></span></div>
+      </ion-col>
+    </ion-row>
+  
+    <ion-row>
+      <ion-col>
+        <ion-list>
+
+          <ion-item>
+              <ion-label>Fecha</ion-label>
+              <ion-datetime display-format="YYYY-MM-DD" [(ngModel)]="datetime"></ion-datetime>
+          </ion-item>
+      
+          <ion-item>
+            <ion-label>Tipo</ion-label>
+            <ion-select okText="Aceptar"
+                        cancelText="Cancelar"
+                        slot="end"
+                        class= "myCustomSelect"
+                        [(ngModel)]="report.tipo_denuncia_id">
+              <ion-select-option value="1">Bacheo</ion-select-option>
+              <ion-select-option value="2">Delincuencia</ion-select-option>
+            </ion-select>
+          </ion-item>
+          
+          <ion-item>
+            <ion-label>Zona</ion-label>
+            <ion-select okText="Aceptar" cancelText="Cancelar" [(ngModel)]="report.zona">
+              <ion-select-option *ngFor="let z of zonas" [value]="z">{{z}}</ion-select-option>
+            </ion-select>
+          </ion-item>
+      
+          <ion-item>
+            <ion-label position="floating">Descripción</ion-label>
+            <ion-textarea auto-grow [(ngModel)]="report.descripcion"></ion-textarea>
+          </ion-item>
+
+        </ion-list>
+      </ion-col>
+    </ion-row>
+
+    <ion-row>
+      <ion-col size="6">
+        <ion-button (click)="takePicture()" expand="block" shape="round" size="small">
+          <ion-icon slot="icon-only" name="camera-outline"></ion-icon>
+        </ion-button>
+      </ion-col>
+      <ion-col size="6">
+        <ion-button (click)="getFromGallery()" expand="block" shape="round" size="small">
+          <ion-icon slot="icon-only" name="images-outline"></ion-icon>
+        </ion-button>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+
+  <ion-row>
+    <ion-col
+      size="4"
+      *ngFor="let img of images; let i = index;"
+      class="ion-text-center"> 
+      <img [src]="'data:image/png;base64,'+img"/>
+      <ion-fab vertical="bottom" horizontal="end">
+        <ion-fab-button
+          color="danger"
+          size="small"
+          (click)="deleteImage(i)">
+          <ion-icon name="trash-outline"></ion-icon>
+        </ion-fab-button>
+      </ion-fab>
+    </ion-col>
+  </ion-row>
+
+  <ion-button (click)="sendReport()" expand="block" shape="round" size="small" class="btn-finalizar">
+    FINALIZAR 
+  </ion-button>
+
+</div>

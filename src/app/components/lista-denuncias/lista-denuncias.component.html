@@ -1,0 +1,14 @@
+<ion-list>
+
+  <ion-card *ngFor="let denuncia of denuncias">
+    <ion-item>
+      <ion-label>DENUNCIA, ID {{denuncia.id}}</ion-label>
+      <ion-badge [class]="denuncia.estado === '0' ? 'badge-red' : (denuncia.estado === '1' ? 'badge-yellow' : 'badge-green')"
+                 mode="ios">{{denuncia.estado === '0' ? 'En Espera' : (denuncia.estado === '1' ? 'En proceso' : 'Finalizada')}}</ion-badge>
+    </ion-item>
+    <ion-card-content>
+      {{denuncia.descripcion}}
+    </ion-card-content>
+  </ion-card>
+
+</ion-list>
